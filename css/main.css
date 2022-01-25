@@ -2,9 +2,9 @@
   --body-bg-color: #f5f7f9;
   --content-bg-color: #fff;
   --card-bg-color: #f5f5f5;
-  --text-color: #555;
+  --text-color: #e1e1e1;
   --blockquote-color: #666;
-  --link-color: #555;
+  --link-color: #ec6969;
   --link-hover-color: #222;
   --brand-color: #fff;
   --brand-hover-color: #fff;
@@ -13,8 +13,8 @@
   --menu-item-bg-color: #f5f5f5;
   --theme-color: #222;
   --btn-default-bg: #fff;
-  --btn-default-color: #555;
-  --btn-default-border-color: #555;
+  --btn-default-color: #e1e1e1;
+  --btn-default-border-color: #e1e1e1;
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
@@ -738,7 +738,7 @@ pre code {
   width: 100%;
 }
 .post-body .label {
-  color: #555;
+  color: #e1e1e1;
   padding: 0 2px;
 }
 .post-body .label.default {
@@ -1257,6 +1257,7 @@ pre code {
   margin-top: 0;
   padding-top: 0;
 }
+@import url("http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 .headband {
   background: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad);
   background-size: 500%;
@@ -1270,6 +1271,10 @@ pre code {
 }
 .header {
   background: transparent;
+  font-family: "Poppins";
+  position: relative;
+  justify-content: center;
+  z-index: 1;
 }
 .header-inner {
   margin: 0 auto;
@@ -1313,7 +1318,7 @@ pre code {
 }
 .brand {
   border-bottom: 0;
-  color: var(--brand-color);
+  color: #fff;
   display: inline-block;
   padding: 0 40px;
 }
@@ -1362,6 +1367,18 @@ pre code {
   background: var(--text-color);
   border-radius: 1px;
 }
+.site-nav {
+  border-radius: 15px;
+  margin-top: 10px;
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 10px 5px 25px rgba(0,0,0,0.5);
+/* 溢出隐藏 */
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+/* 背景模糊 */
+  backdrop-filter: blur(5px);
+}
 @media (max-width: 767px) {
   .site-nav {
     --scroll-height: 0;
@@ -1400,10 +1417,11 @@ pre code {
   display: block;
   font-size: 0.8125em;
   transition: border-color 0.2s ease-in-out;
+  color: #fff;
 }
 .menu-item a:hover,
 .menu-item a.menu-item-active {
-  background: var(--menu-item-bg-color);
+  background: rgba(99,98,185,0.425);
 }
 .menu-item .fa,
 .menu-item .fab,
@@ -1506,12 +1524,12 @@ pre code {
   transform: rotateZ(360deg);
 }
 .site-author-name {
-  color: var(--text-color);
+  color: #fff;
   font-weight: 600;
   margin: 0;
 }
 .site-description {
-  color: #999;
+  color: #fff;
   font-size: 0.8125em;
   margin-top: 0;
 }
@@ -1736,6 +1754,7 @@ pre code {
 .site-state-item a {
   border-bottom: 0;
   display: block;
+  color: rgba(255,255,255,0.767);
 }
 .site-state-item-count {
   display: block;
@@ -1926,6 +1945,9 @@ pre code {
 .post-button {
   margin-top: 40px;
   text-align: center;
+}
+.use-motion {
+  background: rgba(0,0,0,0.849);
 }
 .use-motion .post-block,
 .use-motion .pagination,
@@ -2678,10 +2700,10 @@ ul.breadcrumb li:last-child {
   animation-fill-mode: both;
 }
 .header-inner {
-  background: var(--content-bg-color);
   border-radius: initial;
   box-shadow: initial;
   width: 240px;
+  background-color: rgba(255,255,255,0.1);
 }
 @media (max-width: 991px) {
   .header-inner {
@@ -2737,6 +2759,14 @@ ul.breadcrumb li:last-child {
   background: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad);
   background-size: 500%;
   animation: bgAnimation 15s linear infinite;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 10px 5px 25px rgba(0,0,0,0.5);
+/* 溢出隐藏 */
+  overflow: hidden;
+  border-left: 1px solid rgba(255,255,255,0.5);
+/* 背景模糊 */
+  backdrop-filter: blur(5px);
 }
 @media (max-width: 991px) {
   .site-nav-on .site-brand-container {
@@ -2812,6 +2842,7 @@ ul.breadcrumb li:last-child {
     background-position: 0% 50%;
   }
 }
+@import url("http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @media (min-width: 768px) and (max-width: 991px) {
   .site-nav {
     --scroll-height: 0;
@@ -2883,12 +2914,14 @@ ul.breadcrumb li:last-child {
 .sub-menu .menu-item-active:hover {
   border-bottom-color: #fc6423;
 }
+@import url("http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 .sidebar {
   margin-top: 12px;
   position: -webkit-sticky;
   position: sticky;
   top: 12px;
   width: 240px;
+  font-family: "Poppins";
   visibility: hidden;
 }
 @media (max-width: 991px) {
@@ -2900,11 +2933,19 @@ ul.breadcrumb li:last-child {
   display: none;
 }
 .sidebar-inner {
-  background: var(--content-bg-color);
-  border-radius: initial;
+  border-radius: 15px;
   box-shadow: initial;
   box-sizing: border-box;
-  color: var(--text-color);
+  color: #fff;
+  font: "Poppins";
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 10px 5px 25px rgba(0,0,0,0.5);
+/* 溢出隐藏 */
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+/* 背景模糊 */
+  backdrop-filter: blur(5px);
 }
 .site-state-item {
   padding: 0 10px;
@@ -2951,9 +2992,18 @@ ul.breadcrumb li:last-child {
   background: var(--body-bg-color);
 }
 .main-inner {
-  background: var(--content-bg-color);
-  box-shadow: initial;
   padding: 40px;
+  margin-left: 30px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 10px 5px 25px rgba(0,0,0,0.5);
+/* 溢出隐藏 */
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+/* 背景模糊 */
+  backdrop-filter: blur(5px);
 }
 @media (max-width: 991px) {
   .main-inner {
