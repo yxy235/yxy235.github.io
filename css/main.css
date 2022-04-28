@@ -1385,12 +1385,16 @@ pre code {
     height: 0;
     overflow: hidden;
     transition: height 0.2s ease-in-out;
+    border: 0px;
+    margin-top: 2px;
   }
   body:not(.site-nav-on) .site-nav .animated {
     animation: none;
   }
   body.site-nav-on .site-nav {
     height: var(--scroll-height);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
   }
 }
 .menu {
@@ -2849,12 +2853,16 @@ ul.breadcrumb li:last-child {
     height: 0;
     overflow: hidden;
     transition: height 0.2s ease-in-out;
+    border: 0px;
+    margin-top: 2px;
   }
   body:not(.site-nav-on) .site-nav .animated {
     animation: none;
   }
   body.site-nav-on .site-nav {
     height: var(--scroll-height);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
   }
 }
 .menu .menu-item {
@@ -3008,6 +3016,7 @@ ul.breadcrumb li:last-child {
 @media (max-width: 991px) {
   .main-inner {
     padding: 20px;
+    margin-left: 0px;
   }
 }
 .sub-menu {
